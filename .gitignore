@@ -1,0 +1,12 @@
+*.cm*
+*.o
+*.a
+*.annot
+.chamo*
+META
+master.Makefile
+config.log
+config.status
+config.lineno
+ocaml_config.sh
+autom4te.cache
