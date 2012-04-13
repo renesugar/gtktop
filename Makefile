@@ -67,9 +67,12 @@ install: byte opt
 	$(OCAMLFIND) install $(PACKAGE) META LICENSE \
 	$(LIB) $(CMIFILES) $(LIB:.cmxa=.a) $(LIB_BYTE) \
 	gtktop.mli gtktop_installation.ml
+	$(MKDIR) $(GLADEDIR)
+	$(CP) gtktop.glade $(GLADEDIR)/
 
 uninstall:
 	ocamlfind remove $(PACKAGE)
+	$(RM) $(GLADEDIR)/gtktop.glade
 
 # archive :
 ###########

@@ -12,3 +12,4 @@ config.status
 config.lineno
 ocaml_config.sh
 autom4te.cache
+html/
