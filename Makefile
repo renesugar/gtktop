@@ -34,9 +34,9 @@ COMPFLAGS= -annot
 LIB=gtktop.cmxa
 LIB_BYTE=$(LIB:.cmxa=.cma)
 
-CMXFILES=gtktop.cmx gtktop_installation.cmx
-CMOFILES=$(CMFILES:.cmx=.cmo)
-CMIFILES=$(CMFILES:.cmx=.cmi)
+CMXFILES=gtktop_base.cmx gtktop_installation.cmx gtktop.cmx
+CMOFILES=$(CMXFILES:.cmx=.cmo)
+CMIFILES=$(CMXFILES:.cmx=.cmi)
 
 all: byte opt
 byte: $(LIB_BYTE)
@@ -79,7 +79,11 @@ archive:
 # Cleaning :
 ############
 clean:
-	rm -f *.cm* *.a *.annot *.o
+	rm -f *.cm* *.a *.annot *.o gtktop_base.ml
+
+distclean: clean
+	rm -fr master.Makefile gtktop_installation.ml \
+		ocaml_config.sh config.status config.log autom4te.cache META
 
 # headers :
 ###########
@@ -92,4 +96,9 @@ noheaders:
 	headache -r -c .headache_config $(HEADFILES)
 
 include .depend
+
+# Additional dependencies :
+###########################
+gtktop_base.ml: gtktop.glade
+	$(LABLGLADECC) -hide-default $< > $@
 

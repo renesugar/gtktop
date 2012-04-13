@@ -32,10 +32,10 @@ let glade_dir = "@GLADEDIR@"
 let software_version = "@VERSION@"
 
 (** The default glade template. *)
-let glade_file = Filename.concat glade_dir "custop.glade"
+let glade_file = Filename.concat glade_dir "gtktop.glade"
 
 (** Default main window. *)
 class default_main_gui ?(file=glade_file) () =
   object (self)
-    inherit Custop_base.main ~file ()
+    inherit Gtktop_base.main ~file ()
   end;;

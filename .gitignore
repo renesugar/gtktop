@@ -3,6 +3,7 @@
 *.a
 *.annot
 .chamo*
+gtktop_base.ml
 META
 master.Makefile
 config.log
