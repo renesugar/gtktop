@@ -66,7 +66,8 @@ webdoc: doc
 ################
 install: byte opt
 	$(OCAMLFIND) install $(PACKAGE) META LICENSE \
-	$(LIB) $(CMIFILES) $(LIB:.cmxa=.a) $(LIB_BYTE) $(CMIFILES:.cmi=.mli)
+	$(LIB) $(CMIFILES) $(LIB:.cmxa=.a) $(LIB_BYTE) \
+	gtktop.mli gtktop_installation.ml
 
 uninstall:
 	ocamlfind remove $(PACKAGE)
