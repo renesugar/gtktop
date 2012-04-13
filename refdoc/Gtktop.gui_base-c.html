@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="next" href="Gtktop.param-c.html">
+<link rel="Up" href="Gtktop.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of class attributes" rel=Appendix href="index_attributes.html">
+<link title="Index of class methods" rel=Appendix href="index_methods.html">
+<link title="Index of classes" rel=Appendix href="index_classes.html">
+<link title="Index of class types" rel=Appendix href="index_class_types.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Gtktop" rel="Chapter" href="Gtktop.html">
+<link title="Gtktop_installation" rel="Chapter" href="Gtktop_installation.html"><title>Gtktop : Gtktop.gui_base</title>
+</head>
+<body>
+<div class="navbar">&nbsp;<a href="Gtktop.html">Up</a>
+&nbsp;<a href="Gtktop.param-c.html">Next</a>
+</div>
+<center><h1>Class virtual <a href="type_Gtktop.gui_base.html">Gtktop.gui_base</a></h1></center>
+<br>
+<pre><span name="TYPEgui_base"><span class="keyword">class</span> <span class="keyword">virtual</span> gui_base</span> : <code class="type"></code><code class="code">object</code> <a href="Gtktop.gui_base-c.html">..</a> <code class="code">end</code></pre>What the gui must provide. These are provided by default by the
+<code class="code">Custop_installation.default_main_gui</code> class, built using a glade file
+(from which the <code class="code">Custop_base</code> module is generated).<br>
+<hr width="100%">
+<pre><span id="METHODbind"><span class="keyword">method</span> <span class="keyword">virtual</span> bind</span> : <code class="type">name:string -> callback:(unit -> unit) -> unit</code></pre><pre><span id="METHODcheck_widgets"><span class="keyword">method</span> <span class="keyword">virtual</span> check_widgets</span> : <code class="type">unit -> unit</code></pre><pre><span id="METHODinput_wscroll"><span class="keyword">method</span> <span class="keyword">virtual</span> input_wscroll</span> : <code class="type">GBin.scrolled_window</code></pre><pre><span id="METHODmain"><span class="keyword">method</span> <span class="keyword">virtual</span> main</span> : <code class="type">GWindow.window</code></pre><pre><span id="METHODoutput_wscroll"><span class="keyword">method</span> <span class="keyword">virtual</span> output_wscroll</span> : <code class="type">GBin.scrolled_window</code></pre><pre><span id="METHODreparent"><span class="keyword">method</span> <span class="keyword">virtual</span> reparent</span> : <code class="type">GObj.widget -> unit</code></pre><pre><span id="METHODtoplevel"><span class="keyword">method</span> <span class="keyword">virtual</span> toplevel</span> : <code class="type">GWindow.window</code></pre><pre><span id="METHODvbox_code"><span class="keyword">method</span> <span class="keyword">virtual</span> vbox_code</span> : <code class="type">GPack.box</code></pre><pre><span id="METHODwb_execute"><span class="keyword">method</span> <span class="keyword">virtual</span> wb_execute</span> : <code class="type">GButton.button</code></pre><pre><span id="METHODwf_display"><span class="keyword">method</span> <span class="keyword">virtual</span> wf_display</span> : <code class="type">GBin.frame</code></pre><pre><span id="METHODwf_elements"><span class="keyword">method</span> <span class="keyword">virtual</span> wf_elements</span> : <code class="type">GBin.frame</code></pre><pre><span id="METHODwf_output"><span class="keyword">method</span> <span class="keyword">virtual</span> wf_output</span> : <code class="type">GBin.frame</code></pre><pre><span id="METHODwl_error"><span class="keyword">method</span> <span class="keyword">virtual</span> wl_error</span> : <code class="type">GMisc.label</code></pre><pre><span id="METHODxml"><span class="keyword">method</span> <span class="keyword">virtual</span> xml</span> : <code class="type">Glade.glade_xml Gtk.obj</code></pre></body></html>

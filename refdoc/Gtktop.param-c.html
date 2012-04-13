@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Gtktop.gui_base-c.html">
+<link rel="next" href="Gtktop.elements-c.html">
+<link rel="Up" href="Gtktop.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of class attributes" rel=Appendix href="index_attributes.html">
+<link title="Index of class methods" rel=Appendix href="index_methods.html">
+<link title="Index of classes" rel=Appendix href="index_classes.html">
+<link title="Index of class types" rel=Appendix href="index_class_types.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Gtktop" rel="Chapter" href="Gtktop.html">
+<link title="Gtktop_installation" rel="Chapter" href="Gtktop_installation.html"><link title="Methods returning strings used in interface" rel="Section" href="#3_Methodsreturningstringsusedininterface">
+<title>Gtktop : Gtktop.param</title>
+</head>
+<body>
+<div class="navbar"><a href="Gtktop.gui_base-c.html">Previous</a>
+&nbsp;<a href="Gtktop.html">Up</a>
+&nbsp;<a href="Gtktop.elements-c.html">Next</a>
+</div>
+<center><h1>Class virtual <a href="type_Gtktop.param.html">Gtktop.param</a></h1></center>
+<br>
+<pre><span name="TYPEparam"><span class="keyword">class</span> <span class="keyword">virtual</span> <code class="type">['a]</code> param</span> : <code class="type"></code><code class="code">object</code> <a href="Gtktop.param-c.html">..</a> <code class="code">end</code></pre>What the user of this library must provide.
+   <code class="code">'a</code> represents the type of the elements which can be defined
+   by the code of the user.<br>
+<b>Inherits</b><ul>
+<li><a href="Gtktop.gui_base-c.html"><code class="code">Gtktop.gui_base</code></a>    Developer must provide the gui elements.</li>
+</ul>
+<hr width="100%">
+<pre><span id="METHODabout"><span class="keyword">method</span> <span class="keyword">virtual</span> about</span> : <code class="type">unit -> unit</code></pre><div class="info">
+This method should display a "About ..." window.<br>
+</div>
+<pre><span id="METHODcompare"><span class="keyword">method</span> <span class="keyword">virtual</span> compare</span> : <code class="type">'a -> 'a -> int</code></pre><div class="info">
+This method will be used to compare two elements.<br>
+</div>
+<pre><span id="METHODdisplay_box"><span class="keyword">method</span> display_box</span> : <code class="type"><a href="Gtktop.display_box-c.html">display_box</a> option</code></pre><div class="info">
+Return the optional display box. Default is <code class="code">None</code>.<br>
+</div>
+<pre><span id="METHODdisplay_elt"><span class="keyword">method</span> <span class="keyword">virtual</span> display_elt</span> : <code class="type">('a -> unit) option</code></pre><div class="info">
+This method will be called to display the selected element.
+    It should be <code class="code">Some ...</code> if there is a display box.<br>
+</div>
+<pre><span id="METHODelts_columns"><span class="keyword">method</span> <span class="keyword">virtual</span> elts_columns</span> : <code class="type">(string * ('a -> string)) list</code></pre><div class="info">
+This method returns a description of the columns to display
+         in the list of elements, and for each column a function to
+         get a string from an element.<br>
+</div>
+<pre><span id="METHODexecute"><span class="keyword">method</span> <span class="keyword">virtual</span> execute</span> : <code class="type">string -> string * ('a * int) list</code></pre><div class="info">
+This method is called to execute the user's code. It returns
+         the output (result) string and for each defined element
+         a pair <code class="code">(element, position of first character)</code>.<br>
+</div>
+<pre><span id="METHODini_file"><span class="keyword">method</span> <span class="keyword">virtual</span> ini_file</span> : <code class="type">string</code></pre><div class="info">
+This method returns the absolute name of the file to use
+         to store options.<br>
+</div>
+<pre><span id="METHODsourceview_language"><span class="keyword">method</span> <span class="keyword">virtual</span> sourceview_language</span> : <code class="type">string</code></pre><div class="info">
+This method returns the mime type of the sourceview language to
+         use for syntax highlighting.<br>
+</div>
+<pre><span id="METHODwindow_title_prefix"><span class="keyword">method</span> <span class="keyword">virtual</span> window_title_prefix</span> : <code class="type">string</code></pre><div class="info">
+This method returns the prefix string to use in the window title.<br>
+</div>
+<span id="3_Methodsreturningstringsusedininterface"><h3>Methods returning strings used in interface</h3></span>
+    These can be overriden.<pre><span id="METHODs_color_error_background"><span class="keyword">method</span> s_color_error_background</span> : <code class="type">string</code></pre><pre><span id="METHODs_color_output"><span class="keyword">method</span> s_color_output</span> : <code class="type">string</code></pre><pre><span id="METHODs_color_user_code"><span class="keyword">method</span> s_color_user_code</span> : <code class="type">string</code></pre><pre><span id="METHODs_configuration"><span class="keyword">method</span> s_configuration</span> : <code class="type">string</code></pre><pre><span id="METHODs_display_frame_width"><span class="keyword">method</span> s_display_frame_width</span> : <code class="type">string</code></pre><pre><span id="METHODs_elements_frame_width"><span class="keyword">method</span> s_elements_frame_width</span> : <code class="type">string</code></pre><pre><span id="METHODs_error"><span class="keyword">method</span> s_error</span> : <code class="type">string</code></pre><pre><span id="METHODs_font_code"><span class="keyword">method</span> s_font_code</span> : <code class="type">string</code></pre><pre><span id="METHODs_load_file"><span class="keyword">method</span> s_load_file</span> : <code class="type">string</code></pre><pre><span id="METHODs_output_frame_height"><span class="keyword">method</span> s_output_frame_height</span> : <code class="type">string</code></pre><pre><span id="METHODs_save"><span class="keyword">method</span> s_save</span> : <code class="type">string</code></pre></body></html>
