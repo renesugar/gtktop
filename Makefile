@@ -51,7 +51,7 @@ $(LIB_BYTE): $(CMIFILES) $(CMOFILES)
 
 doc: all
 	mkdir -p html
-	$(OCAMLDOC) -t Gtktop -d html -html gtktop.mli gtktop_installation.mli
+	$(OCAMLFIND) ocamldoc $(OF_FLAGS) -t Gtktop -d html -html gtktop.mli gtktop_installation.mli
 
 webdoc: doc
 	mkdir -p ../gtktop-gh-pages/refdoc
