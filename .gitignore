@@ -4,6 +4,7 @@
 *.annot
 .chamo*
 gtktop_base.ml
+gtktop_installation.ml
 META
 master.Makefile
 config.log
